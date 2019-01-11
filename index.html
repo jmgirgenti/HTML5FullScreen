@@ -73,13 +73,30 @@
     <body>
         <div class="gm4html5_div_class" id="gm4html5_div_id">
             <!-- Create the canvas element the game draws to -->
-            <canvas id="canvas" width="640" height="360">
+            <canvas onclick="openFullscreen()" id="canvas" width="640" height="360">
                <p>Your browser doesn't support HTML5 canvas.</p>
             </canvas>
         </div>
 
         <!-- Run the game code -->
-        <script type="text/javascript" src="html5game/HTML5FullScreen.js?IXTZB=638353330"></script>
+        <script type="text/javascript" src="html5game/HTML5FullScreen.js?ABDYB=1387705979"></script>
         <script>window.onload = GameMaker_Init;</script>
+        <script>
+/* Get the element you want displayed in fullscreen */ 
+var elem = document.getElementById("canvas");
+
+/* Function to open fullscreen mode */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+  elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+  elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+  elem.msRequestFullscreen();
+  }
+}
+</script>
     </body>
 </html>
