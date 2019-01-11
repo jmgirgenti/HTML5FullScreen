@@ -71,8 +71,7 @@
     </head>
 
     <body>
-<button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
-        <div class="gm4html5_div_class" id="gm4html5_div_id">
+        <div onmousedown="openFullscreen()" class="gm4html5_div_class" id="gm4html5_div_id">
             <!-- Create the canvas element the game draws to -->
             <canvas id="canvas" width="640" height="360">
                <p>Your browser doesn't support HTML5 canvas.</p>
@@ -85,9 +84,10 @@
 <script>
 /* Get the element you want displayed in fullscreen */ 
 var elem = document.getElementById("canvas");
-
+var fullscreen=false;
 /* Function to open fullscreen mode */
 function openFullscreen() {
+if(fullscreen===false){
   if (elem.requestFullscreen) {
   elem.requestFullscreen();
   } else if (elem.mozRequestFullScreen) { /* Firefox */
@@ -97,6 +97,8 @@ function openFullscreen() {
   } else if (elem.msRequestFullscreen) { /* IE/Edge */
   elem.msRequestFullscreen();
   }
+fullscreen=true;
+}
 }
 </script>
     </body>
