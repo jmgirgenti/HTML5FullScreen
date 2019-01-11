@@ -1,8 +1,6 @@
-/* Get the element you want displayed in fullscreen */ 
-var elem = document.getElementById("canvas");
-
 /* Function to open fullscreen mode */
 function openFullscreen() {
+var elem = document.getElementById("canvas");
   if (elem.requestFullscreen) {
   elem.requestFullscreen();
   } else if (elem.mozRequestFullScreen) { /* Firefox */
