@@ -27,20 +27,12 @@
 
     <!-- Run the game code -->
     <script type="text/javascript" src="html5game/HTML5FullScreen.js?STLYB=1124858749"></script>
-      <!--  <script>
-        window.onresize = function(event) {
-            applyOrientation();
-        }
+    <script>
 
-        function applyOrientation() {
-            if (window.innerHeight < window.innerWidth) {
-                Swal('LandScape')
-            } else  {
-                    Swal('portrait')
-                }
-            }
 
-    </script>-->
+
+
+    </script>
     <script>
         window.onload = GameMaker_Init;
         Swal({
@@ -50,13 +42,27 @@
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes',
-            cancelButtonText: 'No'
+            cancelButtonText: 'No',
+            onClose: () => {
+                applyOrientation();
+            }
         }).then((result) => {
             if (result.value) {
                 openFullscreen();
-		gml_Script_gmcallback_test("","",true);
             }
         })
+
+        window.onresize = function(event) {
+            applyOrientation();
+        }
+
+        function applyOrientation() {
+            if (window.innerHeight < window.innerWidth) {
+                Swal('LandScape')
+            } else {
+                Swal('portrait')
+            }
+        }
 
     </script>
 </body>
