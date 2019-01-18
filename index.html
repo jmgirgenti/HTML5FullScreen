@@ -17,6 +17,9 @@
 </head>
 
 <body>
+    <div id="overlay">
+        <div id="text">Please Rotate you Device</div>
+    </div>
     <div class="gm4html5_div_class" id="gm4html5_div_id">
         <!-- Create the canvas element the game draws to -->
         <canvas id="canvas" width="720" height="480">
@@ -58,12 +61,16 @@
 
         function applyOrientation() {
             if (window.innerHeight < window.innerWidth) {
-                Swal('LandScape')
+                document.getElementById("overlay").style.display = "block";
             } else {
-                Swal('portrait')
+                document.getElementById("overlay").style.display = "none";
             }
         }
-
+            if (window.innerHeight < window.innerWidth) {
+                document.getElementById("overlay").style.display = "block";
+            } else {
+                document.getElementById("overlay").style.display = "none";
+            }
     </script>
 </body>
 
