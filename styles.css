@@ -1,87 +1,84 @@
             body {
-              background: #000000;
-              color:#cccccc;
-              margin: 0px;
-              padding: 0px;
-              border: 0px;
+                background: #000000;
+                color: #cccccc;
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
             }
+
             canvas {
-                      image-rendering: optimizeSpeed;
-                      -webkit-interpolation-mode: nearest-neighbor;
-                      -ms-touch-action: none;
-                      margin: 0px;
-                      padding: 0px;
-                      border: 0px;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                        transform: translate(-50%, -50%);  
+                image-rendering: optimizeSpeed;
+                -webkit-interpolation-mode: nearest-neighbor;
+                -ms-touch-action: none;
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+                /*position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);*/
             }
+
             :-webkit-full-screen #canvas {
-                 width: 100%;
-                 height: 100%;
+                width: 100%;
+                height: 100%;
             }
-            div.gm4html5_div_class
-            {
-              margin: 0px;
-              padding: 0px;
-              border: 0px;
+
+            div.gm4html5_div_class {
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
             }
+
             /* START - Login Dialog Box */
-            div.gm4html5_login
-            {
-                 padding: 20px;
-                 position: absolute;
-                 border: solid 2px #000000;
-                 background-color: #404040;
-                 color:#00ff00;
-                 border-radius: 15px;
-                 box-shadow: #101010 20px 20px 40px;
+            div.gm4html5_login {
+                padding: 20px;
+                position: absolute;
+                border: solid 2px #000000;
+                background-color: #404040;
+                color: #00ff00;
+                border-radius: 15px;
+                box-shadow: #101010 20px 20px 40px;
             }
-            div.gm4html5_cancel_button
-            {
-                 float: right;
+
+            div.gm4html5_cancel_button {
+                float: right;
             }
-            div.gm4html5_login_button
-            {
-                 float: left;
+
+            div.gm4html5_login_button {
+                float: left;
             }
-            div.gm4html5_login_header
-            {
-                 text-align: center;
+
+            div.gm4html5_login_header {
+                text-align: center;
             }
+
             /* END - Login Dialog Box */
             :-webkit-full-screen {
-               width: 100%;
-               height: 100%;
+                width: 100%;
+                height: 100%;
             }
-        #button {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                        transform: translate(-50%, -50%); 
-        }
 
-#overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 5000;
-  cursor: pointer;
-}
+            #overlay {
+                position: fixed;
+                display: none;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 5000;
+                cursor: pointer;
+            }
 
-#text{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 50px;
-  color: white;
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-}
+            #text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-size: 50px;
+                color: white;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+            }
