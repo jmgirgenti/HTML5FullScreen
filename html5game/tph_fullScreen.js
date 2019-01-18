@@ -1,5 +1,6 @@
 /* Function to open fullscreen mode */
 function openFullscreen() {
+applyOrientation();
 var elem = document.getElementById("canvas");
   if (elem.requestFullscreen) {
   elem.requestFullscreen();
