@@ -37,6 +37,30 @@
 
     </script>
     <script>
+        /* Get the element you want displayed in fullscreen */
+        var elem = document.getElementById("canvas");
+        /* Function to open fullscreen mode */
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+            }
+            applyOrientation();
+        }
+
+        function hideButton() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
         window.onload = GameMaker_Init;
         Swal({
             title: 'Go to Fullscreen?',
@@ -46,9 +70,7 @@
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes',
             cancelButtonText: 'No',
-            onClose: () => {
-                applyOrientation();
-            }
+            onClose: () => {}
         }).then((result) => {
             if (result.value) {
                 openFullscreen();
@@ -66,11 +88,12 @@
                 document.getElementById("overlay").style.display = "none";
             }
         }
-            if (window.innerHeight < window.innerWidth) {
-                document.getElementById("overlay").style.display = "block";
-            } else {
-                document.getElementById("overlay").style.display = "none";
-            }
+        if (window.innerHeight < window.innerWidth) {
+            document.getElementById("overlay").style.display = "block";
+        } else {
+            document.getElementById("overlay").style.display = "none";
+        }
+
     </script>
 </body>
 
